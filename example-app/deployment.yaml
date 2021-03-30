@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-example
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: simple-example
+  template:
+    metadata:
+      labels:
+        app: simple-example
+    spec:
+      containers:
+      - image: quay.io/acend/example-web-go
+        name: simple-example
+        ports:
+        - containerPort: 5000

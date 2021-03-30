@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pre-post-sync-hook
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: pre-post-sync-hook
+  template:
+    metadata:
+      labels:
+        app: pre-post-sync-hook
+    spec:
+      containers:
+      - image: quay.io/acend/example-web-go
+        name: example-web-go
+        ports:
+        - containerPort: 5000
