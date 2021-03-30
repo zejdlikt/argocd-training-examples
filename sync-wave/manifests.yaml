@@ -105,7 +105,7 @@ spec:
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: maintenance-page-up
+  name: maintenance-page-down
   annotations:
     argocd.argoproj.io/hook: Sync
     argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
