@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: overlays-example
+spec:
+  replicas: 2
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: overlays-example
+  template:
+    metadata:
+      labels:
+        app: overlays-example
+    spec:
+      containers:
+      - image: quay.io/acend/example-web-go
+        name: overlays-example
+        ports:
+        - containerPort: 5000
