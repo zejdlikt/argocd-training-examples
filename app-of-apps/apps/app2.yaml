@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: app-of-apps-1
+  name: app-of-apps-3
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
@@ -11,6 +11,6 @@ spec:
     name: in-cluster
   project: default
   source:
-    path: example-app
+    path: app-of-apps/app2
     repoURL: https://github.com/acend/argocd-training
     targetRevision: HEAD

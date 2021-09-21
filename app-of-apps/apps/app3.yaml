@@ -11,6 +11,6 @@ spec:
     name: in-cluster
   project: default
   source:
-    path: example-app
+    path: app-of-apps/app3
     repoURL: https://github.com/acend/argocd-training
     targetRevision: HEAD
