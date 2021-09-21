@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-of-apps-2
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: app-of-apps-2
+  template:
+    metadata:
+      labels:
+        app: app-of-apps-2
+    spec:
+      containers:
+      - image: quay.io/acend/example-web-go
+        name: app-of-apps-2
+        ports:
+        - containerPort: 5000
