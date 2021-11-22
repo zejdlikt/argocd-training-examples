@@ -18,6 +18,3 @@ spec:
         name: simple-example
         ports:
         - containerPort: 5000
-        env:
-        - name: NAME
-          value: BFH
