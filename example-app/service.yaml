@@ -5,6 +5,8 @@ metadata:
 spec:
   ports:
   - port: 5000
+    protocol: TCP
     targetPort: 5000
   selector:
     app: simple-example
+  type: ClusterIP
