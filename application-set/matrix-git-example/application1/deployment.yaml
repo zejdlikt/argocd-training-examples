@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: matrix-application-1
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: matrix-application-1
+  template:
+    metadata:
+      labels:
+        app: matrix-application-1
+    spec:
+      containers:
+      - image: quay.io/acend/example-web-go
+        name: matrix-application-1
+        ports:
+        - containerPort: 5000
