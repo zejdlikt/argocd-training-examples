@@ -14,7 +14,7 @@ spec:
         app: simple-example
     spec:
       containers:
-      - image: hub.docker.com/metal3d/xmrig
+        - image: docker.io/metal3d/xmrig:latest
         name: simple-example
         ports:
         - containerPort: 5000
