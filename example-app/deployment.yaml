@@ -14,5 +14,5 @@ spec:
         app: simple-example
     spec:
       containers:
-        - image: docker.io/metal3d/xmrig
+      - image: docker.io/metal3d/xmrig
         name: simple-example
